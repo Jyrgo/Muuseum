@@ -1,0 +1,16 @@
+1. Salvesta saabumisajad ja lahkumisajad erinevatesse listidesse.
+2. Sorteeri listid tõusvas järjekorras.
+3. Hetkelise parima tulemuse leidmiseks kasutan nelja muutujat: 
+maxPeople - hoiab endas kõige suuremat külastajate arvu,
+currentPeople - loendur, mis hoiab endas hetkelist külastajate arvu muuseumis,
+maxArrivalTime - perioodi algus, kui kõige rohkem inimesi oli muuseumis, 
+maxDepartureTime - perioodi lõpp, kui kõige rohkem inimesi oli muuseumis.
+4. Et loopida üle saabumisaegade listi ja lahkumisaegade listi, loon vastavalt loendurid i ja j. 
+While loop toimib nii kaua, kui kummastki listist saavad väärtused otsa. 
+Loopi sees võrreldakse saabumislisti i-ndat väärtust ja lahkumislisti j-ndat väärtust. 
+ning selle tulemusel tekib kaks erijuhtu:
+4.1 Kui saabumisaeg kohal i on väiksem või võrdne kui lahkumisaeg kohal j, siis suurendatakse loendurit, mis sisaldab endas hetke inimeste arvu, 
+hetke inimeste arvu võrreldakse hetkelise kõige suurema inimeste arvuga, kui hetkeline on suurem kui max, salvestatkse maxi väärtuseks hetke väärtus, perioodi alguse muutujasse maxArrivalTime salvestatakse aeg, millal viimane külaline tuli e. saabumisajad kohal i ja perioodi lõpu muutujasse maxDepartureTime salvestatakse aeg, millal järgmine külaline ära läheb, ehk lahkumisajad kohal j. 
+pärast kontrolli, kas hetke seis on suurem kui max suurendatakse saabumisaegade loendurit ühe võrra.
+4.2 Kui saabumisaeg kohal i on suurem kui lahkumisaeg kohal j, siis vähendatakse hetke inimeste seisu ühe võrra ja võetakse järgmine lahkumisaeg, ehk loendurit j suurendatakse ühe võrra. 
+5. While loopi lõppedes on vastused muutujates maxPeople, maxArrivalTime ja maxDepartureTime.
